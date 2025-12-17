@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Siswa Baru - Media Study Club</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script>
+        function tampilMenu() {
+            var menu = document.getElementById("navMenu");
+            menu.classList.toggle("active");
+        }
+        function registrasi() {
+            document.getElementById('halaman').innerHTML = document.getElementById('halaman2').innerHTML;
+            window.scrollTo(0, 0);
+        }
+        window.onload = function() {
+            document.getElementById('halaman').innerHTML = document.getElementById('halaman1').innerHTML;
+        };
+        function tunjukLogin() {
+            document.getElementById('halaman').innerHTML = document.getElementById('halaman3').innerHTML;
+            window.scrollTo(0, 0);
+        }
+
+        function gagalLogin() {
+            document.getElementById('gagal_label').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <!-- ===== Halaman Pendaftaran ===== -->
+    <template id="halaman1">
+    <main class="container" style="padding: 20px 0;">
+        <div class="content-card">
+            <h1 class="main-title">Formulir Pendaftaran Siswa Baru</h1>
+            <p class="subtitle">Silahkan lengkapi data diri di bawah ini dengan benar</p>
+            
+            <form onsubmit="registrasi()">
+                <!-- Nama Siswa -->
+                <div class="form-group">
+                    <label for="nama" class="form-label">Nama Lengkap Siswa</label>
+                    <input type="text" id="nama" name="nama" class="form-control" placeholder="Budi" required>
+                </div>
+
+                <!-- Kelas & Sekolah -->
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label for="kelas" class="form-label">Kelas Saat Ini</label>
+                        <select id="kelas" name="kelas" class="form-control" required>
+                            <option value="" disabled selected>Pilih Kelas...</option>
+                            <option value="TK">TK / PAUD</option>
+                            <option value="1">1 SD</option>
+                            <option value="2">2 SD</option>
+                            <option value="3">3 SD</option>
+                            <option value="4">4 SD</option>
+                            <option value="5">5 SD</option>
+                            <option value="6">6 SD</option>
+                            <option value="7">7 SMP</option>
+                            <option value="8">8 SMP</option>
+                            <option value="9">9 SMP</option>
+                        </select>
+                    </div>
+                    <div class="form-group" style="flex: 1; min-width: 200px;">
+                        <label for="sekolah" class="form-label">Asal Sekolah</label>
+                        <input type="text" id="sekolah" name="sekolah" class="form-control" placeholder="Contoh: SD Negeri 01 Sukamaju" required>
+                    </div>
+                </div>
+
+                <!-- Pilihan Program -->
+                <div class="form-group">
+                    <label for="program" class="form-label">Pilih Program</label>
+                    <select id="program" name="program" class="form-control" required>
+                        <option value="" disabled selected>Pilih Program...</option>
+                        <option value="reguler"   >Program Kelas Reguler</option>
+                        <option value="private"   >Program Kelas Private</option>
+                        <option value="akselerasi">Program Kelas Akselerasi</option>
+                    </select>
+                </div>
+
+                <hr style="border: 0; border-top: 1px dashed #ccc; margin: 20px 0;">
+                <p style="color: #4da6ff; font-weight: bold; margin-bottom: 20px;">Data Orang Tua / Wali</p>
+
+                <!-- Nama Wali -->
+                <div class="form-group">
+                    <label for="nama_wali" class="form-label">Nama Orang Tua / Wali</label>
+                    <input type="text" id="nama_wali" name="nama_wali" class="form-control" placeholder="Nama Ayah atau Ibu" required>
+                </div>
+
+                <!-- Kontak Wali -->
+                <div class="form-group">
+                    <label for="kontak_wali" class="form-label">Nomor Ponsel / WhatsApp Wali</label>
+                    <input type="tel" id="kontak_wali" name="kontak_wali" class="form-control" placeholder="Contoh: 081234567890" pattern="[0-9]*" required>
+                    <small style="color: #7f8c8d;">Nomor ini akan dihubungi untuk konfirmasi jadwal.</small>
+                </div>
+
+                <!-- Alamat -->
+                <div class="form-group">
+                    <label for="alamat" class="form-label">Alamat Lengkap Domisili</label>
+                    <textarea id="alamat" name="alamat" class="form-control" placeholder="Masukkan nama jalan, nomor rumah, RT/RW..." required></textarea>
+                </div>
+
+                <!-- Tombol Submit -->
+                <button type="submit" class="btn-submit">Kirim Pendaftaran</button>
+                <p class="subtitle">
+                    Sudah mendaftar? <br>
+                    <a href="#" style="text-decoration: none; font-weight: bold; color: #4da6ff;" onclick="tunjukLogin()">
+                        Klik di sini untuk masuk
+                    </a>
+                </p>
+            </form>
+        </div>
+    </main>
+    </template>
+
+    <!-- ===== Hasil Daftar ===== -->
+    <template id="halaman2">
+    <main class="container" style="padding: 20px 0; min-height: 100vh;">
+        <div class="content-card">
+            <h1 class="main-title">Terima Kasih atas Pendaftaran Anda!</h1>
+            <p class="subtitle">Kami akan menghubungi Anda melalui WhatsApp untuk konfirmasi jadwal pelajaran.</p>
+            <p class="subtitle" style="font-size: small;">
+                Sayangnya programer kami belum memikirkan fitur selanjutnya setelah ini
+            </p>
+        </div>
+    </main>
+    </template>
+
+    <!-- ===== Halaman Login ===== -->
+     <template id="halaman3">
+    <main class="container" style="padding: 20px 0;">
+        <div class="content-card">
+            <h1 class="main-title">Halaman Login Siswa</h1>
+            <!-- Nama -->
+            <div class="form-group">
+                <label for="nama" class="form-label">Username</label>
+                <input type="text" id="nama" name="nama" class="form-control" placeholder="Username" required>
+            </div>
+            <div class="form-group">
+                <label for="nama" class="form-label">Password</label>
+                <input type="password" id="nama" name="Password" class="form-control" placeholder="Password" required>
+            </div>
+            <div id="gagal_label" class="subtitle" style="display: none; color: red;">
+                <p>Username atau Password salah!</p>
+            </div>
+            <div style="text-align: center;">
+                <button type="submit" class="btn-submit" onclick="gagalLogin()">Masuk</button>
+            </div>
+    </template>
+
+
+    <header class="navbar">
+        <div class="navbar-logo"> <img src="logo.jpeg" alt="Logo Perusahaan"> </div>
+        <nav>
+            <button class="menu-toggle" onclick="tampilMenu()">&#9776;</button>
+            <ul class="navbar-menu" id="navMenu">
+                <li><a href="index.html">Beranda</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="halaman"></div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Media Study Club. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

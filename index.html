@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Study Club - Bimbingan Belajar Seru</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+
+    <script>
+        function show_menu() {
+            var menu = document.getElementById("navMenu");
+            menu.classList.toggle("active");
+        }
+        window.onload = function() {
+            document.getElementById('halaman').innerHTML = document.getElementById('halaman1').innerHTML;
+        };
+        function tunjuk_halaman(hal) {
+            var panel        = document.getElementById('halaman');
+            var template_src = document.getElementById('halaman'+hal).innerHTML;
+            panel.innerHTML  = template_src;
+            show_menu();
+        }
+    </script>
+</head>
+<body>
+    <!-- Beranda -->
+    <template id="halaman1">
+        <main class="container">
+            
+            <section class="main_banner">
+                <img src="class.jpg" alt="Suasana Belajar" class="banner_image">
+            </section>
+
+            <section style="padding: 20px 0;">
+                <div class="content-card">
+                    <h1 class="main-title">Media Study Club</h1>
+                    <p class="subtitle">Bimbingan Belajar Seru & Menyenangkan untuk Masa Depan Gemilang</p>
+                    
+                    <p>
+                        Selamat datang di <strong>Media Study Club</strong>! 
+                        Kami mengerti bahwa setiap anak memiliki cara belajarnya masing-masing yang unik. 
+                        Oleh karena itu, kami hadir bukan sekadar sebagai tempat les biasa, 
+                        melainkan sebagai rumah kedua bagi siswa untuk mengeksplorasi ilmu pengetahuan dengan cara yang 
+                        <em>fun</em>, interaktif, dan jauh dari kata membosankan.
+                    </p>
+                    
+                    <div class="highlight">
+                        <strong>Mengapa Harus Media Study Club?</strong>
+                        <p>Kami menggabungkan kurikulum sekolah dengan metode <em>Joyful Learning</em>. 
+                            Suasana kelas didesain ceria sehingga siswa tidak merasa tertekan.
+                        </p>
+                    </div>
+
+                    <h3 class="section-title">Pilihan Program Kelas</h3>
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <h4>Jenjang TK</h4>
+                            <p>Calistung Ceria: Fokus pada pengenalan dasar membaca, menulis, dan berhitung dengan metode bermain.</p>
+                        </div>
+                        <div class="grid-item">
+                            <h4>Jenjang SD</h4>
+                            <p>Fundamental Kuat: Pendampingan materi tematik sekolah dan penguatan konsep Matematika & Sains.</p>
+                        </div>
+                        <div class="grid-item">
+                            <h4>Jenjang SMP</h4>
+                            <p>Prestasi Maksimal: Pendalaman materi kompleks (Matematika, IPA, Bahasa Inggris) dan persiapan ujian.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="section-title">Keunggulan Kami</h3>
+                    <ul>
+                        <li style="margin-bottom: 10px;">Pengajar muda dan energik</li>
+                        <li style="margin-bottom: 10px;">Pembagian kelas untuk private</li>
+                        <li style="margin-bottom: 10px;">Fasilitas nyaman dengan AC dan WiFi gratis</li>
+                    </ul>
+
+                    <div style="text-align: center; margin-top: 30px;">
+                        <a href="registrasi.html" class="btn-daftar">Daftar Sekarang Juga</a>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </template>
+
+    <!-- Program kelas -->
+    <template id="halaman2">
+        <main class="container">
+            <section style="padding: 20px 0;">
+                <div class="content-card">
+                    <h1 class="main-title">Pilihan Program Kelas</h1>
+                    <p class="subtitle">Pilih metode belajar yang paling pas untukmu</p>
+                    
+                    <div class="grid-container">
+                        <div class="grid-item" style="border-top: 5px solid #4da6ff;">
+                            <h4 style="text-align:center;">
+                                Kelas Reguler
+                                <p style="text-align:center; color:#777; font-size: small;">Belajar Seru Bersama Teman</p>
+                            </h4>
+                            <ul class="feature-list">
+                                <li>Pendampingan belajar materi sekolah harian</li>
+                                <li>Kelas interaktif bersama teman sebaya</li>
+                                <li>Latihan intensif soal-soal ujian & kuis</li>
+                            </ul>
+                            <div style="text-align:center; margin-top:auto;">
+                                <button class="btn-daftar" style="width:100%;">
+                                    Pilih Reguler
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="grid-item" style="border-top: 5px solid #2ecc71; background-color: #f6fff8;">
+                            <h4 style="text-align:center;">
+                                Kelas Private
+                                <p style="text-align:center; color:#777; font-size: small;">Fokus & Lebih Intensif</p>
+                            </h4>
+                            <ul class="feature-list">
+                                <li>Grup kecil (1-3 orang) agar lebih fokus</li>
+                                <li>Penjelasan materi lebih dalam & detail</li>
+                                <li>Waktu bimbingan fleksibel sesuai request</li>
+                            </ul>
+                            <div style="text-align:center; margin-top:auto;">
+                                <button class="btn-daftar" style="width:100%; background-color:#2ecc71;">
+                                    Pilih Private
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="grid-item" style="border-top: 5px solid #e74c3c;">
+                            <h4 style="text-align:center;">
+                                Kelas Akselerasi
+                                <p style="text-align:center; color:#777; font-size: small;">Cepat, Tepat, & Sigap</p>
+                            </h4>
+                            <ul class="feature-list">
+                                <li>Pelajari "Jurus Kilat" & tips cepat soal</li>
+                                <li>Akses chat pembimbing 24/7 (tanya jawab)</li>
+                                <li>Pembelajaran materi dipercepat (speed learning)</li>
+                            </ul>
+                            <div style="text-align:center; margin-top:auto;">
+                                <button class="btn-daftar" style="width:100%; background-color:#e74c3c;">
+                                    Pilih Akselerasi
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="highlight" style="margin-top: 40px; text-align:center;">
+                        <p>Bingung memilih kelas? 
+                            <a href="#" onclick="tunjuk_halaman('2')" style="color:#e67e22; font-weight:bold;">
+                                Konsultasi Gratis
+                            </a> 
+                            dengan Kakak Admin kami!</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </template>
+
+    <!--Tentang kami -->
+    <template id="halaman3">
+        <main class="container">
+            <section style="padding: 20px 0;">
+                <div class="content-card">
+                    <h1 class="main-title">Tentang Kami</h1>
+                    <p class="subtitle">Tim Pengajar dan Admin yang Siap Membantu</p>
+                    
+                    <p style="text-align: center;">
+                        Jika Anda memiliki pertanyaan seputar pendaftaran, jadwal kelas, atau metode pembelajaran, 
+                        jangan ragu untuk menghubungi tim kami di bawah ini.
+                    </p>
+
+                    <h3 class="section-title">Kontak Person</h3>
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <h4>Zaid Asyrof
+                            <p style="color: #7f8c8d;">Programer</p></h4>
+                            <p style="font-weight: bold; color: #4da6ff; margin-top: 10px;">24183207010</p>
+                            <a href="#" class="btn-whatsapp">Chat WhatsApp</a>
+                        </div>
+                        <div class="grid-item">
+                            <h4>Ludfi Yuwanda Putri
+                            <p style="color: #7f8c8d;">Desainer</p></h4>
+                            <p style="font-weight: bold; color: #4da6ff; margin-top: 10px;">24183207017</p>
+                            <a href="#" class="btn-whatsapp">Chat WhatsApp</a>
+                        </div>
+                        <div class="grid-item">
+                            <h4>Intan Faulia Anggaraini
+                            <p style="color: #7f8c8d;">Konten Writer</p></h4>
+                            <p style="font-weight: bold; color: #4da6ff; margin-top: 10px;">24183207011</p>
+                            <a href="#" class="btn-whatsapp">Chat WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <!-- Email Section -->
+                    <div class="highlight" style="text-align: center; margin-top: 40px;">
+                        <h4 style="margin-top: 0; color: #2c3e50;">Kirim Pesan Melalui Email</h4>
+                        <p>Untuk pertanyaan kerjasama atau informasi lebih detail, silakan kirim email ke:</p>
+                        <p style="font-size: 20px; font-weight: bold; color: #2c3e50;">info@mediastudyclub.com</p>
+                    </div>
+
+                </div>
+            </section>
+        </main>
+    </template>
+    
+    
+    <header class="navbar">
+        <div class="navbar-logo"> <img src="logo.jpeg" alt="Logo Perusahaan"> </div>
+        <nav>
+            <button class="menu-toggle" onclick="show_menu()">
+                &#9776; 
+            </button>
+            <ul class="navbar-menu" id="navMenu">
+                <li><a href="#" onclick="tunjuk_halaman('1')">Beranda</a></li>
+                <li><a href="#" onclick="tunjuk_halaman('2')">Program Kelas</a></li>
+                <li><a href="#" onclick="tunjuk_halaman('3')">Tentang Kami</a></li>
+                <li><a href="registrasi.html" class="btn-daftar">Daftar Sekarang</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="halaman"></div>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Media Study Club. All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
