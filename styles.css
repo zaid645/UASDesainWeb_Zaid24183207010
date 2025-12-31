@@ -39,13 +39,13 @@
             border-radius   : 8px;
         }
 
-        .navbar-menu {
+        .navbar_menu {
             display         : flex;
             align-items     : right;
             list-style      : none;
         }
 
-        .navbar-menu a {
+        .navbar_menu a {
             text-decoration: none;
             color          : #2c3e50;
             font-size      : 16px;
@@ -55,12 +55,12 @@
             border-radius  : 5px;
         }
 
-        .navbar-menu a:hover {
+        .navbar_menu a:hover {
             color: #1e90ff;
             background-color: rgba(30, 144, 255, 0.1);
         }
 
-        .menu-toggle {
+        .menu_active {
             display    : none;
             background : none;
             border     : none;
@@ -89,7 +89,7 @@
         }
 
         /* ===== MEMBUAT KONTEN SEPERTI KARTU ===== */
-        .content-card {
+        .content_card {
             background-color : white; 
             padding          : 40px; 
             border-radius    : 16px; 
@@ -97,7 +97,7 @@
             margin-bottom    : 40px;
         }
 
-        h1.main-title {
+        h1.main_title {
             text-align    : center;
             color         : #2c3e50;
             font-size     : 40px;
@@ -111,7 +111,7 @@
             margin-bottom : 40px;
         }
 
-        .section-title {
+        .section_title {
             color         : #4da6ff;
             border-left   : 5px solid #4da6ff;
             padding-left  : 15px;
@@ -121,14 +121,14 @@
         }
 
         /* ===== GRID UNTUK KARTU ===== */
-        .grid-container {
+        .grid_container {
             display               : grid;
             grid-template-columns : repeat(auto-fit, minmax(250px, 1fr));
             gap                   : 20px;
             margin-top            : 20px;
         }
 
-        .grid-item {
+        .grid_item {
             background     : #f0f9ff;
             padding        : 20px;
             border-radius  : 10px;
@@ -137,7 +137,7 @@
             flex-direction : column;
         }
         
-        .grid-item h4 {
+        .grid_item h4 {
             margin-top : 0;
             color      : #2c3e50;
         }
@@ -160,7 +160,7 @@
         }
 
         /* ===== GAYA TOMBOL WHATSAPP - halaman 2 ===== */
-        .btn-whatsapp {
+        .contact_btn {
             background-color: #25D366;
             color           : white;
             padding         : 10px 15px;
@@ -175,14 +175,14 @@
             font-size       : 16px;
         }
 
-        .btn-whatsapp:hover {
+        .contact_btn:hover {
             background-color: #128C7E;
             box-shadow      : 0 6px 15px rgba(37, 211, 102, 0.6);
             transform       : translateY(-1px);
         }
 
         /* ===== KHUSUS TOMBOL DAFTAR - akhir halaman 1 ===== */
-        .btn-daftar {
+        .regist_btn {
             background-color: #4da6ff;
             color           : white;
             padding         : 8px 20px;
@@ -193,7 +193,7 @@
             transition      : all 0.3s ease;
         }
 
-        .btn-daftar:hover {
+        .regist_btn:hover {
             background-color: #1e90ff;
             box-shadow      : 0 6px 15px rgba(30, 144, 255, 0.5);
             transform       : translateY(-2px);
@@ -201,18 +201,18 @@
 
         
         /* ===== HALAMAN REGISTRASI===== */
-        .form-group {
+        .form_group {
             margin-bottom: 20px;
         }
 
-        .form-label {
+        .form_label {
             display       : block;
             margin-bottom : 8px;
             color         : #2c3e50;
             font-weight   : 600;
         }
 
-        .form-control {
+        .form_control {
             width         : 100%;
             padding       : 12px;
             border        : 2px solid #e1f0fa;
@@ -223,18 +223,18 @@
             transition    : border-color 0.3s ease;
         }
 
-        .form-control:focus {
+        .form_control:focus {
             outline          : none;
             border-color     : #4da6ff;
             background-color : #fcfdff;
         }
 
-        textarea.form-control {
+        textarea.form_control {
             resize     : vertical;
             min-height : 100px;
         }
 
-        .btn-submit {
+        .btn_submit {
             background-color : #4da6ff;
             color            : white;
             border           : none;
@@ -249,7 +249,7 @@
             margin-top       : 10px;
         }
 
-        .btn-submit:hover {
+        .btn_submit:hover {
             background-color : #1e90ff;
             transform        : translateY(-2px);
             box-shadow       : 0 6px 15px rgba(30, 144, 255, 0.5);
@@ -264,11 +264,11 @@
                 padding: 10px 20px;
             }
 
-            .menu-toggle {
+            .menu_active {
                 display: block; 
             }
 
-            .navbar-menu { 
+            .navbar_menu { 
                 /* menyembunyikan menu secara default */
                 display          : none; 
                 flex-direction   : column;
@@ -283,23 +283,23 @@
                 padding          : 20px 0;
             }
 
-            .navbar-menu.active {
+            .navbar_menu.active {
                 display: flex;
             }
 
-            .navbar-menu li {
+            .navbar_menu li {
                 margin     : 10px 0;
                 width      : 100%;
                 text-align : center;
             }
 
-            .navbar-menu a {
+            .navbar_menu a {
                 display   : block;
                 padding   : 10px;
                 font-size : 18px;
             }
 
-            .btn-daftar {
+            .regist_btn {
                 margin  : 10px auto; 
                 display : inline-block;
                 width   : 80%;
@@ -310,11 +310,11 @@
         /* ===== UNTUK ANDROID (720 PIXEL) ===== */
         /* ============================================== */
         @media (max-width: 720px) {
-            h1.main-title {
+            h1.main_title {
                 font-size: 20px;
             }
             
-            .content-card {
+            .content_card {
                 padding: 20px;
             }
 
